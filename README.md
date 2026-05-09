@@ -1,14 +1,15 @@
-# mikan-terrain-swir-filter-
+# mikan-terrain-swir-filter
 ClaudeCodeに実装を丸投げした八幡浜市のみかんの出荷量を衛星画像から分析するモデル
 
-zenn_article_draft.md
-にはZennの記事を書かせてみた。
-00_pipeline_overview.ipynb
-00_pipeline_overview_executed.ipynb
-にの実際にどのようなデータをどう処理したのかも書かせてある。
+| ファイル | 内容 |
+|---|---|
+| `README.md` | ClaudeCodeに投げたプロンプトの記録。どんな指示を与えれば動くコードが出てくるか、実際の会話ログとして残している |
+| `zenn_article_draft.md` | ClaudeCodeに生成させたZenn記事の草稿。「記事まで書かせるとどうなるか」の実験 |
+| `00_pipeline_overview.ipynb` | パイプライン全体の概要Notebook。どのデータをどう処理したかがステップ別に追える |
 
 
-下記は読み込ませたプロンプトです。
+
+**下記は読み込ませたプロンプトです。**
 
 # 八幡浜みかん産地 時系列分析プロジェクト
 
