@@ -1,0 +1,29 @@
+# 環境・認証
+.env
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# 生データ（大容量 / ライセンス上再配布不可）
+data/raw/fude/
+data/raw/gee_exports/
+
+# 処理済みデータ（GEE実行で再現可能）
+data/processed/
+
+# 学習済みモデル（再学習で再現可能）
+outputs/models/
+
+# 生成図（再実行で再現可能）
+outputs/figures/
+
+# 実行済みノートブック（出力込みで大容量）
+notebooks/*_executed.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 統計CSVは含める（小容量・公開データ）
+!data/raw/stats/

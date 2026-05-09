@@ -1,0 +1,49 @@
+[project]
+name = "yawatahama-mikan"
+city_code_5 = "38204"
+city_code_6 = "382040"
+pref_code = "38000"
+
+[aoi]
+# 八幡浜市域に絞ったAOI [west, south, east, north]
+coords = [132.38, 33.42, 132.52, 33.53]
+
+[sentinel2]
+collection = "COPERNICUS/S2_SR_HARMONIZED"
+cloud_score_collection = "GOOGLE/CLOUD_SCORE_PLUS/V1/S2_HARMONIZED"
+cloud_threshold = 0.65
+scale_m = 10
+year = 2022
+
+[sentinel1]
+collection = "COPERNICUS/S1_GRD"
+polarizations = ["VV", "VH"]
+scale_m = 10
+
+[dem]
+collection = "USGS/SRTMGL1_003"
+band = "elevation"
+
+[landsat]
+start_year = 1993
+end_year = 2016
+cloud_cover = 30
+
+[fude]
+area_min_m2 = 500
+land_type_hata = 200  # 畑（みかん候補）
+land_type_ta = 100    # 田（ネガティブサンプル）
+
+[estat]
+# 出荷量統計テーブルID
+stats_id_cumulative = "0003274240"  # 果樹累年統計 1993-2005（市町村別）
+stats_id_2006 = "0003022267"        # 市町村別 2006年
+stats_id_pref = "0003313868"        # 愛媛県計（疑似ラベル用）
+yawatahama_share_proxy = 0.31       # 2005-2006年実績平均シェア
+
+[model]
+random_state = 42
+n_estimators_rf = 300
+test_size_lat_frac = 0.2  # 緯度順で後ろ20%をテスト（空間分割）
+n_estimators_xgb = 100
+max_depth_xgb = 3
